@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/parkingarea"
+    tools:context=".MapsActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:text="RoutMap"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_source"
+        android:hint="موقعیت فعلی تان را وارد کنید..."
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:padding="12dp"
+        android:layout_marginTop="10dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_destination"
+        android:hint="موقعیت هدف خود را وارد کنید..."
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:padding="12dp"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_track"
+        android:layout_marginTop="2dp"
+        android:background="#3131B9"
+        android:padding="5dp"
+        android:textStyle="bold"
+        android:text="راه یابی"
+        />
+
+</LinearLayout>

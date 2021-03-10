@@ -1,0 +1,144 @@
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/flag"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/location_search"
+            android:layout_width="318dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:textColorHint="#CAB0B0"
+            android:textColor="#F3F0F0"
+            android:hint="برای دریافتن اسم آن موقعیت رابنویسید" />
+
+        <ImageButton
+            android:id="@+id/search_address"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_toEndOf="@+id/location_search"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="true"
+            android:onClick="onClick"
+            android:paddingRight="2dp"
+            android:paddingLeft="2dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/search"/>
+    </RelativeLayout>
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        tools:context=".MapsActivity" />
+    <ImageButton
+        android:id="@+id/normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:layout_alignParentTop="true"
+        android:onClick="onClick"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_map_black_24dp"
+        />
+    <ImageButton
+        android:id="@+id/satellite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="340dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="80dp"
+        android:onClick="onClick"
+        android:src="@drawable/ic_satellite_black_24dp"
+        />
+    <ImageButton
+        android:id="@+id/hybridMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="380dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="80dp"
+        android:onClick="onClick"
+        android:src="@drawable/ic_terrain_black_24dp"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/hospital_nearby"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="25dp"
+            android:onClick="onClick"
+            android:padding="2dp"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:src="@drawable/doctor" />
+
+        <ImageButton
+            android:id="@+id/university_nearby"
+            android:onClick="onClick"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="2dp"
+            android:layout_alignParentBottom="true"
+            android:padding="2dp"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_toEndOf="@+id/hospital_nearby"
+            android:src="@drawable/graduated" />
+
+        <ImageButton
+            android:id="@+id/parking_nearby"
+            android:onClick="onClick"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="2dp"
+            android:layout_toEndOf="@+id/university_nearby"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:padding="2dp"
+            android:src="@drawable/parking"
+            />
+        <ImageButton
+            android:id="@+id/register"
+            android:layout_width="60dp"
+            android:onClick="onClick"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/parking_nearby"
+            android:adjustViewBounds="true"
+            android:padding="2dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/registration" />
+        <ImageButton
+            android:id="@+id/RoadMap"
+            android:layout_width="60dp"
+            android:onClick="onClick"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/register"
+            android:adjustViewBounds="true"
+            android:padding="2dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/route" />
+
+
+    </RelativeLayout>
+</RelativeLayout>
